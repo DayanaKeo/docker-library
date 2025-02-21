@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bibliothèque Numérique</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Bibliothèque Numérique</h2>
+
+  <button id="openModal">Ajouter un livre</button>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Ajouter un livre</h2>
+      <form id="add-book-form">
+        <div>
+          <label for="titre">Titre :</label>
+          <input type="text" id="titre" required>
+        </div>
+        <div>
+          <label for="intro">Introduction :</label>
+          <textarea id="intro" required></textarea>
+        </div>
+        <div>
+          <label for="auteur">Auteur :</label>
+          <input type="text" id="auteur" required>
+        </div>
+        <div>
+          <label for="genre">Genre :</label>
+          <input type="text" id="genre" required>
+        </div>
+        <button type="submit">Ajouter</button>
+      </form>
+    </div>
+  </div>
+
+  <select id="genreFilter">
+    <option value="all">Tous les genres</option>
+  </select>
+
+  <h2>Liste des livres</h2>
+  <div id="books-list"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
